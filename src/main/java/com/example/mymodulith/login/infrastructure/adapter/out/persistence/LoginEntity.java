@@ -1,4 +1,4 @@
-package com.example.mymodulith.login;
+package com.example.mymodulith.login.infrastructure.adapter.out.persistence;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

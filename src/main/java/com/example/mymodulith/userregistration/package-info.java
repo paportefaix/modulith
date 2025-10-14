@@ -2,8 +2,8 @@
 
 @ApplicationModule(
   allowedDependencies = {
-    "login::LoginService",
-    "login::LoginDto",
+    "login::SaveUserLoginPort",
+    "login::Login",
     "notification::NotificationService",
     "common::*"}
 )
