@@ -1,6 +1,6 @@
 package com.example.mymodulith.login.infrastructure.adapter.out.persistence.service;
 
-import com.example.mymodulith.login.application.port.out.LoginRepository;
+import com.example.mymodulith.login.application.port.out.LoginService;
 import com.example.mymodulith.login.domain.LoginAggregate;
 import com.example.mymodulith.login.infrastructure.adapter.out.persistence.ILoginRepository;
 import com.example.mymodulith.login.infrastructure.adapter.out.persistence.LoginEntity;
@@ -8,17 +8,15 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Slf4j
 @Service
 @AllArgsConstructor
-public class LoginServiceAdapter implements LoginRepository {
+public class DomainLoginService implements LoginService {
 
   public ILoginRepository iLoginRepository;
 
   public LoginAggregate loadLogin(String username) throws Exception {
-    Optional<LoginEntity> userLogin = iLoginRepository.findById(username);
+    var userLogin = iLoginRepository.findById(username).orElse(null);
     return LoginAggregate.load(userLogin);
   }
 

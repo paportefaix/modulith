@@ -24,6 +24,8 @@ public class ModularityTest {
     ApplicationModules modules = ApplicationModules.of(MymodulithApplication.class);
     modules.verify(); // Vérifie les dépendances entre modules
     new Documenter(modules)
+      .writeDocumentation()
+      .writeModuleMetadata()
       .writeModulesAsPlantUml() // Génère un diagramme PlantUML
       .writeIndividualModulesAsPlantUml()
       .writeModuleCanvases()
