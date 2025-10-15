@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
 @Service
-public class DomainUserRegistrationServicePort implements UserRegistrationServicePort {
+public class DomainUserRegistrationService implements UserRegistrationServicePort {
 
   private IUserRegistrationRepository iUserRegistrationRepository;
 

@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="RUN" type="Application" factoryName="Application">
+    <envs>
+      <env name="-Dspring.profiles.active" value="local" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.example.mymodulith.MymodulithApplication" />
+    <module name="mymodulith" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.example.mymodulith.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
