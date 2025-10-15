@@ -3,10 +3,12 @@ package com.example.mymodulith.login.infrastructure.adapter.in;
 import com.example.mymodulith.login.application.port.in.AuthenticateUserPort;
 import com.example.mymodulith.login.application.port.in.Login;
 import lombok.AllArgsConstructor;
+import org.jmolecules.architecture.hexagonal.PrimaryAdapter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@PrimaryAdapter
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/auth")

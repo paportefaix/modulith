@@ -5,8 +5,10 @@ import com.example.mymodulith.userregistration.domain.User;
 import com.example.mymodulith.userregistration.infrastructure.adapter.out.persistence.IUserRegistrationRepository;
 import com.example.mymodulith.userregistration.infrastructure.adapter.out.persistence.UserEntity;
 import lombok.AllArgsConstructor;
+import org.jmolecules.architecture.hexagonal.SecondaryAdapter;
 import org.springframework.stereotype.Service;
 
+@SecondaryAdapter
 @AllArgsConstructor
 @Service
 public class DomainUserRegistrationService implements UserRegistrationServicePort {

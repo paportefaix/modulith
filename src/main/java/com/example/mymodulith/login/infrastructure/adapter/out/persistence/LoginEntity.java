@@ -5,6 +5,7 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
+@org.jmolecules.ddd.annotation.Entity
 @Entity
 @Getter
 @Setter

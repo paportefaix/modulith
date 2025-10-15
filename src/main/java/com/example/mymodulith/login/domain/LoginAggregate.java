@@ -2,8 +2,9 @@ package com.example.mymodulith.login.domain;
 
 import com.example.mymodulith.login.infrastructure.adapter.out.persistence.LoginEntity;
 import lombok.Getter;
+import org.jmolecules.ddd.annotation.AggregateRoot;
 
-
+@AggregateRoot
 public class LoginAggregate {
 
   @Getter

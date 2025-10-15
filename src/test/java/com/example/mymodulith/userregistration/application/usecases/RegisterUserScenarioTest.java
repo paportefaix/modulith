@@ -24,6 +24,5 @@ public class RegisterUserScenarioTest {
         Assertions.assertEquals("firstname", userRegisteredEvent.firstName());
         Assertions.assertEquals("lastname", userRegisteredEvent.lastName());
       });
-
   }
 }

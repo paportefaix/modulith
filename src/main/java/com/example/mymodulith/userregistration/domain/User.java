@@ -2,9 +2,11 @@ package com.example.mymodulith.userregistration.domain;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
+import org.jmolecules.ddd.annotation.AggregateRoot;
 
 import java.util.regex.Pattern;
 
+@AggregateRoot
 public class User {
 
   @Getter

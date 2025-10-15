@@ -1,17 +1,19 @@
 package com.example.mymodulith.login.infrastructure.adapter.out.persistence.service;
 
-import com.example.mymodulith.login.application.port.out.LoginService;
+import com.example.mymodulith.login.application.port.out.LoginServicePort;
 import com.example.mymodulith.login.domain.LoginAggregate;
 import com.example.mymodulith.login.infrastructure.adapter.out.persistence.ILoginRepository;
 import com.example.mymodulith.login.infrastructure.adapter.out.persistence.LoginEntity;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.jmolecules.architecture.hexagonal.SecondaryAdapter;
 import org.springframework.stereotype.Service;
 
+@SecondaryAdapter
 @Slf4j
 @Service
 @AllArgsConstructor
-public class DomainLoginService implements LoginService {
+public class DomainLoginServicePort implements LoginServicePort {
 
   public ILoginRepository iLoginRepository;
 

@@ -49,6 +49,19 @@
       <groupId>org.springframework.modulith</groupId>
       <artifactId>spring-modulith-starter-jpa</artifactId>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.jmolecules/jmolecules-ddd -->
+    <dependency>
+      <groupId>org.jmolecules</groupId>
+      <artifactId>jmolecules-ddd</artifactId>
+      <version>1.10.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.jmolecules/jmolecules-hexagonal-architecture -->
+    <dependency>
+      <groupId>org.jmolecules</groupId>
+      <artifactId>jmolecules-hexagonal-architecture</artifactId>
+      <version>1.10.0</version>
+    </dependency>
 
     <dependency>
       <groupId>com.h2database</groupId>

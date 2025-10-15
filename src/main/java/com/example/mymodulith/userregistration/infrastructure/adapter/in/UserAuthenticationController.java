@@ -4,10 +4,12 @@ import com.example.mymodulith.userregistration.application.port.in.RegisterUserP
 import com.example.mymodulith.userregistration.application.port.in.UserInformations;
 import com.example.mymodulith.userregistration.application.port.in.VerifyUserPort;
 import lombok.AllArgsConstructor;
+import org.jmolecules.architecture.hexagonal.PrimaryAdapter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@PrimaryAdapter
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/auth")

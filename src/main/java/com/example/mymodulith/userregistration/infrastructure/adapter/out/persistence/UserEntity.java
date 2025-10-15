@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
+@org.jmolecules.ddd.annotation.Entity
 @Entity
 @Data
 @NoArgsConstructor

@@ -14,14 +14,8 @@ public class ModularityTest {
   }
 
   @Test
-  void createDocumentation() {
-    ApplicationModules modules = ApplicationModules.of(MymodulithApplication.class);
-    new Documenter(modules).writeDocumentation();
-  }
-
-  @Test
   void generateModuleDiagram() {
-    ApplicationModules modules = ApplicationModules.of(MymodulithApplication.class);
+    ApplicationModules modules = ApplicationModules.of("com.example.mymodulith");
     modules.verify(); // Vérifie les dépendances entre modules
     new Documenter(modules)
       .writeDocumentation()
@@ -32,3 +26,4 @@ public class ModularityTest {
       .writeAggregatingDocument(); // Génère un diagramme par module
   }
 }
+
