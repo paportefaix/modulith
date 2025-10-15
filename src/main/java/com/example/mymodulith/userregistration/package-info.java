@@ -4,7 +4,7 @@
   allowedDependencies = {
     "login::SaveUserLoginPort",
     "login::Login",
-    "notification::NotificationService",
+    "notification::UserRegisteredEvent",
     "common::*"}
 )
 package com.example.mymodulith.userregistration;

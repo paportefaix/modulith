@@ -1,4 +1,4 @@
-package com.example.mymodulith.login.application.useCase;
+package com.example.mymodulith.login.application.usecases;
 
 import com.example.mymodulith.login.application.port.in.Login;
 import com.example.mymodulith.login.application.port.in.SaveUserLoginPort;
