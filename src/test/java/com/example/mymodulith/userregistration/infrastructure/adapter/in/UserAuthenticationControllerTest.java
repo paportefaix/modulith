@@ -15,6 +15,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 @ApplicationModuleTest(mode = ApplicationModuleTest.BootstrapMode.DIRECT_DEPENDENCIES)
 @AutoConfigureMockMvc
 class UserAuthenticationControllerTest {
@@ -38,7 +40,7 @@ class UserAuthenticationControllerTest {
               "lastName": "User"
           }
           """))
-      .andExpect(MockMvcResultMatchers.status().isCreated())
+      .andExpect(status().isCreated())
       .andExpect(MockMvcResultMatchers.content().string("User registered successfully"));
 
     ArgumentCaptor<UserInformations> userInformationsArgumentCaptor = ArgumentCaptor.forClass(UserInformations.class);

@@ -3,6 +3,8 @@ package com.example.mymodulith.userregistration.infrastructure.adapter.in;
 import com.example.mymodulith.userregistration.application.port.in.RegisterUserPort;
 import com.example.mymodulith.userregistration.application.port.in.UserInformations;
 import com.example.mymodulith.userregistration.application.port.in.VerifyUserPort;
+
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.jmolecules.architecture.hexagonal.PrimaryAdapter;
 import org.springframework.http.HttpStatus;
@@ -19,7 +21,7 @@ class UserAuthenticationController {
   private final VerifyUserPort verifyUserPort;
 
   @PostMapping("/register")
-  public ResponseEntity<String> registerUser(@RequestBody UserDto userDto) {
+  public ResponseEntity<String> registerUser(@RequestBody @Valid UserDto userDto) {
     registerUserPort.register(new UserInformations(userDto.username(), userDto.password(), userDto.email(), userDto.firstName(), userDto.lastName()));
     return new ResponseEntity<>("User registered successfully", HttpStatus.CREATED);
   }
