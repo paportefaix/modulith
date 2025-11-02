@@ -12,6 +12,10 @@ java {
   targetCompatibility = JavaVersion.VERSION_25
 }
 
+springBoot {
+  mainClass = 'com.example.mymodulith.MyModulithApplication'
+}
+
 repositories {
   mavenCentral()
 }
