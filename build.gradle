@@ -1,0 +1,57 @@
+plugins {
+  id 'java'
+  id 'org.springframework.boot' version '3.5.6'
+  id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.example.mymodulith'
+version = '0.0.1-SNAPSHOT'
+
+java {
+  sourceCompatibility = JavaVersion.VERSION_25
+  targetCompatibility = JavaVersion.VERSION_25
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  // Spring Modulith
+  implementation "org.springframework.modulith:spring-modulith-actuator"
+  implementation "org.springframework.modulith:spring-modulith-starter-insight"
+  implementation "org.springframework.modulith:spring-modulith-starter-core"
+  implementation "org.springframework.modulith:spring-modulith-starter-jpa"
+
+  // Spring Boot
+  implementation "org.springframework.boot:spring-boot-starter-actuator"
+  implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+  implementation "org.springframework.boot:spring-boot-starter-web"
+  implementation "org.springframework.boot:spring-boot-starter-validation"
+
+  // JMolecules
+  implementation "org.jmolecules:jmolecules-ddd:1.10.0"
+  implementation "org.jmolecules:jmolecules-hexagonal-architecture:1.10.0"
+
+  // Database (H2)
+  runtimeOnly "com.h2database:h2"
+
+  // Lombok
+  compileOnly "org.projectlombok:lombok"
+  annotationProcessor "org.projectlombok:lombok"
+
+  // Tests
+  testImplementation "org.springframework.boot:spring-boot-starter-test"
+  testImplementation "org.springframework.boot:spring-boot-test-autoconfigure"
+  testImplementation "org.springframework.modulith:spring-modulith-starter-test"
+}
+
+dependencyManagement {
+  imports {
+    mavenBom "org.springframework.modulith:spring-modulith-bom:1.4.3"
+  }
+}
+
+tasks.named('test') {
+  useJUnitPlatform()
+}
